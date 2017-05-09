@@ -70,12 +70,12 @@ class LoggerView extends Component {
   }
 
   getArchiveKey() {
-    axios.get('/api/logs/key')
+    axios.get('/botpress/api/logs/key')
     .then(({data}) => this.setState({ archiveUrl: '/logs/archive/' + data.secret }))
   }
 
   queryLogs() {
-    axios.get('/api/logs', {
+    axios.get('/botpress/api/logs', {
       params: {
         limit: this.state.limit
       }

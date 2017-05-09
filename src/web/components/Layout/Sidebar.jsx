@@ -79,7 +79,7 @@ class Sidebar extends Component {
 
   renderModuleItem(module) {
     const path = `/modules/${module.name}`
-    const iconPath = `/img/modules/${module.name}.png`
+    const iconPath = `/botpress/img/modules/${module.name}.png`
     const className = classnames({
       [style.active]: this.routeActive(path),
       'bp-sidebar-active': this.routeActive(path)

@@ -50,7 +50,7 @@ class EventBus extends EventEmitter2 {
     }
 
     let socketUrl = window.location.origin
-    const socket = this.socket = io.connect(socketUrl, { query })
+    const socket = this.socket = io.connect(socketUrl, { query, path: '/botpress/socket.io' })
     socket.on('event', this.dispatchSocketEvent)
   }
 }

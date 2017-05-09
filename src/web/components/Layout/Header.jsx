@@ -1,8 +1,8 @@
 import React,{Component} from 'react'
 import {
-  Navbar, 
-  Nav, 
-  NavItem, 
+  Navbar,
+  Nav,
+  NavItem,
   Glyphicon,
   NavDropdown
 } from 'react-bootstrap'
@@ -21,7 +21,7 @@ const getProfileImgUrl = () => {
   const token = getToken()
 
   const encoded = token.token.replace(/\w+\./, '').replace(/\.[\w|\-|_]+/, '')
-  
+
   const profile = JSON.parse(Buffer(encoded, 'base64').toString())
 
   if (!profile.imgUrl) {
@@ -42,11 +42,11 @@ class Header extends Component {
 
     const url = getProfileImgUrl()
     let label = <img src={url}></img>
-    
+
     if (!url) {
       label = <i className="material-icons">account_circle</i>
     }
-    
+
     return  <NavDropdown className={style.account} noCaret title={label} id="account-button">
       <ProfileMenu logout={logout}/>
     </NavDropdown>
@@ -54,7 +54,7 @@ class Header extends Component {
 
   renderSlackButton() {
     return <span className={classnames(style.slack, 'bp-slack')} >
-      <img src="/img/slack_mark.svg" />
+      <img src="/botpress/img/slack_mark.svg" />
     </span>
   }
 

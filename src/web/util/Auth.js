@@ -31,7 +31,7 @@ export const logout = () => {
 }
 
 export const login = (user, password) => {
-  return axios.post('/api/login', { user, password })
+  return axios.post('/botpress/api/login', { user, password })
   .then((result) => {
     if (result.data.success) {
       setToken(result.data.token)

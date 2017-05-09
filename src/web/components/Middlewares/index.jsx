@@ -107,7 +107,7 @@ export default class MiddlewaresComponent extends Component {
   }
 
   componentDidMount() {
-    axios.get('/api/middlewares')
+    axios.get('/botpress/api/middlewares')
     .then(({ data }) => this.setMiddlewares(data))
   }
 
@@ -155,7 +155,7 @@ export default class MiddlewaresComponent extends Component {
   }
 
   isDirty() {
-    return this.state.initialStateHash !== null 
+    return this.state.initialStateHash !== null
       && this.state.initialStateHash !== this.getStateHash()
   }
 
@@ -184,7 +184,7 @@ export default class MiddlewaresComponent extends Component {
       })
     }
 
-    axios.post('/api/middlewares/customizations', { middlewares })
+    axios.post('/botpress/api/middlewares/customizations', { middlewares })
     .then(({ data }) => this.setMiddlewares(data))
   }
 
@@ -248,7 +248,7 @@ export default class MiddlewaresComponent extends Component {
       return <div>Loading...</div>
     }
 
-    return this.props.type === 'incoming' 
+    return this.props.type === 'incoming'
       ? this.renderIncoming()
       : this.renderOutgoing()
   }

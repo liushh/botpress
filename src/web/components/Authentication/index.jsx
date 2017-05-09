@@ -65,7 +65,7 @@ export default function ensureAuthenticated(WrappedComponent) {
     }
 
     checkAuth() {
-      axios.get('/api/ping')
+      axios.get('/botpress/api/ping')
       .catch((err) => {
         if(err.response.status === 401) {
           this.promptLogin()

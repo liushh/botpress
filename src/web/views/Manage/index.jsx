@@ -24,7 +24,7 @@ export default class ManageView extends React.Component {
   }
 
   queryModules() {
-    return axios.get('/api/module/all')
+    return axios.get('/botpress/api/module/all')
     .then((result) => {
       this.setState({
         modules: result.data

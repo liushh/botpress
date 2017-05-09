@@ -24,7 +24,7 @@ export default class GuidedTour extends React.Component {
   }
 
   handleClose() {
-    axios.delete('/api/guided-tour').then(() => {
+    axios.delete('/botpress/api/guided-tour').then(() => {
       this.setState({ finished: true })
     })
   }
@@ -61,13 +61,13 @@ export default class GuidedTour extends React.Component {
     return <div>
       <p>{emojify(':tada:', 100)}</p>
       <p className={style.big}>Congratulations on choosing Botpress for your next bot!</p>
-      <p>Botpress is the most effective way for developers to create a bot. 
+      <p>Botpress is the most effective way for developers to create a bot.
       This very short tour will help you get started quickly.</p>
       <hr />
-      <p>First, you should know that a Botpress bot is just a regular Node.js application. 
-      There is no black magic, and everything your bot does is done either through code you write or 
+      <p>First, you should know that a Botpress bot is just a regular Node.js application.
+      There is no black magic, and everything your bot does is done either through code you write or
       done for you by pre-made modules (thanks to our awesome community).</p>
-      <p>By default, your bot's entry point is the <code>index.js</code> file, but you can arrange your code base as you wish. 
+      <p>By default, your bot's entry point is the <code>index.js</code> file, but you can arrange your code base as you wish.
       Again, <span className={style.emp}>your bot is just a regular node program.</span></p>
     </div>
   }
@@ -79,8 +79,8 @@ export default class GuidedTour extends React.Component {
       <p>Whenever there's a piece of functionality that you need for your bot, think modules.</p>
       <hr />
       <p>You can install modules via this graphical interface or from the command line interface.</p>
-      <p>If there's no module for the generic feature you are looking for, please consider creating one 
-      or contributing to an existing module to add that feature. Botpress relies heavily on the community to thrive. 
+      <p>If there's no module for the generic feature you are looking for, please consider creating one
+      or contributing to an existing module to add that feature. Botpress relies heavily on the community to thrive.
       Every single contribution is needed, even if it's tiny {emojify(':blush:')}!</p>
       <p>Installing a module from the CLI is as simple as typing <code>botpress install messenger</code></p>
     </div>

@@ -16,14 +16,14 @@ const {
 
 export default {
   fetchModules() {
-    axios.get('/api/modules')
+    axios.get('/botpress/api/modules')
     .then((result) => {
       reactor.dispatch(MODULES_RECEIVED, { modules: result.data })
     })
   },
 
   fetchNotifications() {
-    axios.get('/api/notifications')
+    axios.get('/botpress/api/notifications')
     .then((result) => {
       reactor.dispatch(ALL_NOTIFICATIONS_RECEIVED, { notifications: result.data })
     })
@@ -46,9 +46,9 @@ export default {
   },
 
   fetchBotInformation() {
-    axios.get('/api/bot/information')
+    axios.get('/botpress/api/bot/information')
     .then((information) => {
-      axios.get('/api/bot/production')
+      axios.get('/botpress/api/bot/production')
       .then((production) => {
         const botInformationWithProduction = information.data
         botInformationWithProduction.production = production.data

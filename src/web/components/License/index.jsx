@@ -31,7 +31,7 @@ export default class LicenseComponent extends React.Component {
   }
 
   getLicenses() {
-    axios.get('/api/license')
+    axios.get('/botpress/api/license')
     .then((result) => {
       this.setState({
         licenses: result.data,
@@ -48,7 +48,7 @@ export default class LicenseComponent extends React.Component {
   handleSave() {
     const selectedLicense = this.state.licenses[this.state.selectedOption]
     const newLicense = selectedLicense.name
-    axios.post('/api/license', { license: newLicense })
+    axios.post('/botpress/api/license', { license: newLicense })
     .then(() => {
       actions.licenseChanged(newLicense)
       this.handleClose()

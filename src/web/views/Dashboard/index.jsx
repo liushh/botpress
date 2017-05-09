@@ -50,7 +50,7 @@ class DashboardView extends React.Component {
   }
 
   queryHero() {
-    return axios.get('/api/module/hero')
+    return axios.get('/botpress/api/module/hero')
     .then((result) => {
       this.setState({
         hero: result.data
@@ -59,7 +59,7 @@ class DashboardView extends React.Component {
   }
 
   queryModulesPopular() {
-    return axios.get('/api/module/popular')
+    return axios.get('/botpress/api/module/popular')
     .then((result) => {
       this.setState({
         popularModules: result.data
@@ -68,7 +68,7 @@ class DashboardView extends React.Component {
   }
 
   queryFeaturedModules() {
-    return axios.get('/api/module/featured')
+    return axios.get('/botpress/api/module/featured')
     .then((result) => {
       this.setState({
         featuredModules: result.data

@@ -20,7 +20,7 @@ import Notifications from '~/views/Notifications'
 import Logs from '~/views/Logs'
 import Login from '~/views/Login'
 
-const appHistory = useRouterHistory(createHistory)({basename: '/'})
+const appHistory = useRouterHistory(createHistory)({basename: '/botpress/'})
 
 function logPageView() {
   ReactGA.set({ page: window.location.pathname })

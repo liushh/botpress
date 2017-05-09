@@ -355,7 +355,7 @@ class WebServer {
     const app = express()
     const server = http.createServer(app)
     const port = this.bp.botfile.port || 3000
-    
+
     serveApi(app, this.bp)
     await setupSocket(server, this.bp)
     serveStatic(app, this.bp)

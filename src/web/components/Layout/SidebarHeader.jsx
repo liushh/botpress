@@ -13,7 +13,7 @@ export default class SidebarHeader extends Component {
       <Navbar.Header>
         <Navbar.Brand>
           <a href="/" className={classnames(style.logo, 'bp-logo')}>
-            <img src="/img/logo.png" alt="Botpress Logo"/>
+            <img src="/botpress/img/logo.png" alt="Botpress Logo"/>
           </a>
         </Navbar.Brand>
         <Navbar.Toggle/>
