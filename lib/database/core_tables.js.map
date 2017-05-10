@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/database/core_tables.js"],"names":["module","exports","require"],"mappings":";;AAAAA,OAAOC,OAAP,GAAiB,CACfC,QAAQ,YAAR,CADe,CAAjB","file":"core_tables.js","sourcesContent":["module.exports = [\n  require('./users.js')\n]\n"]}
